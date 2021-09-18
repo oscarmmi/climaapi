@@ -36,9 +36,9 @@ form.addEventListener("submit", e => {
     });
 
     if (filteredArray.length > 0) {
-      msg.textContent = `You already know the weather for ${
+      msg.textContent = `Ya buscaste el clima para ${
         filteredArray[0].querySelector(".city-name span").textContent
-      } ...otherwise be more specific by providing the country code as well 😉`;
+      } , si deseas ser mas especifíco puedes escribir también el nombre del país 😉`;
       form.reset();
       input.focus();
       return;
@@ -75,7 +75,7 @@ form.addEventListener("submit", e => {
       list.appendChild(li);
     })
     .catch(() => {
-      msg.textContent = "Please search for a valid city 😩";
+      msg.textContent = "Por favor ingrese una ciudad válida 😩";
     });
 
   msg.textContent = "";
